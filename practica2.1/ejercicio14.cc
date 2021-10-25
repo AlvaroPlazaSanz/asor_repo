@@ -9,9 +9,11 @@
 int main(){
   
   time_t tim = time(NULL);                                                                                             
-  struct tm *buff = localtime(&tim);                                                                                                                                                                                                        
-  printf("Year: %i", buff->tm_year + 1900);  // Por defecto debemos sumarle 1900 al año 
+  struct tm *buff = localtime(&tim);  
   
+  char buffer[256];                                                                                                    
+  strftime(buffer, 256, "%A, %B %d %Y, %H:%M", buff);  //Utilizamos el formato de strftime para mostrarlo como en el enunciado                                                                
+  printf("%s\n", buffer);
   
 
   return 1;
