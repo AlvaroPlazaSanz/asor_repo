@@ -1,0 +1,9 @@
+Crear un directorio:
+> mkdir directorioPrueba
+
+Quitar los permisos de ejecución para usuario, grupo y otros:
+> chmod -x directorioPrueba/
+
+Intentar cambiar al directorio:
+> cd directorioPrueba/
+-bash: cd: directorioPrueba/: Permission denied
