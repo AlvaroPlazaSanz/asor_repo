@@ -1,29 +1,122 @@
 > man ls
 ls: muestra el contenido de directorios y los atributos básicos de los ficheros.
 
-> ls -a: No ignora las entradas que empiezan por .
 
+
+> ls -a: No ignora las entradas que empiezan por .
+SALIDA:
+.   bin   dev  home  lib    lost+found  mnt  proc  run   snap  sys  usr
+..  boot  etc  init  lib64  media       opt  root  sbin  srv   tmp  var
 
 
 > ls -l: Usa un formato de listado largo
-
+SALIDA:
+total 700
+drwxr-xr-x   2 root root   4096 Oct 25 11:05 bin
+drwxr-xr-x   2 root root   4096 Aug 21  2020 boot
+drwxr-xr-x   8 root root   2720 Nov  8 09:18 dev
+drwxr-xr-x  90 root root   4096 Nov  8 09:18 etc
+drwxr-xr-x   3 root root   4096 Oct 25 11:06 home
+-rwxr-xr-x   2 root root 632048 Oct 25 09:46 init
+drwxr-xr-x  20 root root   4096 Aug 21  2020 lib
+drwxr-xr-x   2 root root   4096 Aug 21  2020 lib64
+drwx------   2 root root  16384 Apr 10  2019 lost+found
+drwxr-xr-x   2 root root   4096 Aug 21  2020 media
+drwxr-xr-x   6 root root   4096 Oct 25 11:05 mnt
+drwxr-xr-x   2 root root   4096 Aug 21  2020 opt
+dr-xr-xr-x 165 root root      0 Nov  8 09:18 proc
+drwx------   4 root root   4096 Nov  8 09:46 root
+drwxr-xr-x   9 root root    180 Nov  8 09:32 run
+drwxr-xr-x   2 root root   4096 Oct 25 11:05 sbin
+drwxr-xr-x   2 root root   4096 Jul 10  2020 snap
+drwxr-xr-x   2 root root   4096 Aug 21  2020 srv
+dr-xr-xr-x  11 root root      0 Nov  8 09:18 sys
+drwxrwxrwt   4 root root   4096 Nov  8 09:43 tmp
+drwxr-xr-x  10 root root   4096 Aug 21  2020 usr
+drwxr-xr-x  13 root root   4096 Aug 21  2020 var
 
 > ls -d: Lista únicamente los directorios pero no su contenido
-
+SALIDA:
+.
 
 > ls -h: Junto con las opciones -l y/o -s , muestra los tamaños legibles (1K, 234M, 2G)
-
+SALIDA:
+total 700K
+4.0K drwxr-xr-x   2 root root 4.0K Oct 25 11:05 bin
+4.0K drwxr-xr-x   2 root root 4.0K Aug 21  2020 boot
+   0 drwxr-xr-x   8 root root 2.7K Nov  8 09:18 dev
+4.0K drwxr-xr-x  90 root root 4.0K Nov  8 09:18 etc
+4.0K drwxr-xr-x   3 root root 4.0K Oct 25 11:06 home
+620K -rwxr-xr-x   2 root root 618K Oct 25 09:46 init
+4.0K drwxr-xr-x  20 root root 4.0K Aug 21  2020 lib
+4.0K drwxr-xr-x   2 root root 4.0K Aug 21  2020 lib64
+ 16K drwx------   2 root root  16K Apr 10  2019 lost+found
+4.0K drwxr-xr-x   2 root root 4.0K Aug 21  2020 media
+4.0K drwxr-xr-x   6 root root 4.0K Oct 25 11:05 mnt
+4.0K drwxr-xr-x   2 root root 4.0K Aug 21  2020 opt
+   0 dr-xr-xr-x 165 root root    0 Nov  8 09:18 proc
+4.0K drwx------   4 root root 4.0K Nov  8 09:46 root
+   0 drwxr-xr-x   9 root root  180 Nov  8 09:32 run
+4.0K drwxr-xr-x   2 root root 4.0K Oct 25 11:05 sbin
+4.0K drwxr-xr-x   2 root root 4.0K Jul 10  2020 snap
+4.0K drwxr-xr-x   2 root root 4.0K Aug 21  2020 srv
+   0 dr-xr-xr-x  11 root root    0 Nov  8 09:18 sys
+4.0K drwxrwxrwt   4 root root 4.0K Nov  8 09:43 tmp
+4.0K drwxr-xr-x  10 root root 4.0K Aug 21  2020 usr
+4.0K drwxr-xr-x  13 root root 4.0K Aug 21  2020 var
 
 > ls -i: Imprime el inodo de cada fichero
+SALIDA:
+               12 bin                   11 lost+found              40962 snap
+             8193 boot               16387 media                   40963 srv
+                1 dev                24578 mnt                         1 sys
+            16385 etc                24579 opt                     49154 tmp
+            16386 home                   1 proc                    49155 usr
+55169095435445088 init               32770 root                    40964 var
+            24577 lib                    1 run
+             8195 lib64              40961 sbin
 
 
 > ls -R: Lista los subdirectorios de forma recursiva
+SALIDA:
+.:
+alvaplaz
+
+./alvaplaz:
 
 
 > ls -1: Lista un fichero por linea
+SALIDA:
+bin
+boot
+dev
+etc
+home
+init
+lib
+lib64
+lost+found
+media
+mnt
+opt
+proc
+root
+run
+sbin
+snap
+srv
+tmp
+usr
+var
 
 
 > ls -F: Añade un indicador (*/->@) a las entradas.
+SALIDA:
+bin/   dev/  home/  lib/    lost+found/  mnt/  proc/  run/   snap/  sys/  usr/
+boot/  etc/  init*  lib64/  media/       opt/  root/  sbin/  srv/   tmp/  var/
 
 
 > ls --color: Colorea la salida, WHEN puede ser 'always' (por defecto), 'auto' o 'never'.
+SALIDA:
+bin   dev  home  lib    lost+found  mnt  proc  run   snap  sys  usr
+boot  etc  init  lib64  media       opt  root  sbin  srv   tmp  var
