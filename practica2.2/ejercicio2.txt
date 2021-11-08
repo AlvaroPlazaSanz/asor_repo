@@ -1,0 +1,18 @@
+
+Directorio /proc/
+> cd proc
+> ls -ld
+dr-xr-xr-x 165 root root 0 Nov  8 09:18 .
+Posee permisos r(lectura) y x(ejecucion) para el propietario, el grupo y el resto
+
+Directorio /root/
+> cd root
+> ls -ld
+drwx------ 4 root root 4096 Nov  8 09:46 .
+Posee permisos r(lectura), w(escritura) y x(ejecucion) para el propietario
+
+Directorio /alvaplaz/
+> cd /home/alvaplaz
+> ls -ld
+drwxr-xr-x 4 alvaplaz alvaplaz 4096 Nov  8 09:34 .
+Posee permisos rwx para el propietario y rx para el grupo y el resto
