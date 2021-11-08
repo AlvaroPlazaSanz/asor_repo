@@ -1,0 +1,29 @@
+> man ls
+ls: muestra el contenido de directorios y los atributos básicos de los ficheros.
+
+> ls -a: No ignora las entradas que empiezan por .
+
+
+
+> ls -l: Usa un formato de listado largo
+
+
+> ls -d: Lista únicamente los directorios pero no su contenido
+
+
+> ls -h: Junto con las opciones -l y/o -s , muestra los tamaños legibles (1K, 234M, 2G)
+
+
+> ls -i: Imprime el inodo de cada fichero
+
+
+> ls -R: Lista los subdirectorios de forma recursiva
+
+
+> ls -1: Lista un fichero por linea
+
+
+> ls -F: Añade un indicador (*/->@) a las entradas.
+
+
+> ls --color: Colorea la salida, WHEN puede ser 'always' (por defecto), 'auto' o 'never'.
