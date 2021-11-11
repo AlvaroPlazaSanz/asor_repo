@@ -1,0 +1,46 @@
+
+1) Con la opción -s, se crea un enlace simbólico. Crear un enlace simbólico a un fichero ordinario y otro a un directorio. 
+Comprobar el resultado con ls -l y ls -i. Determinar el inodo de cada fichero.
+
+> touch fich
+> ln -s fich ficheroSim
+> ls -l
+lrwxrwxrwx 1 alvaplaz alvaplaz    4 Nov 11 18:33 ficheroSim -> fich
+> ls -i
+2542 ficheroSim
+
+> mkdir dir
+> ln -s dir dirSim
+> ln -l
+lrwxrwxrwx 1 alvaplaz alvaplaz    3 Nov 11 18:37 dirSim -> dir
+> ln -i
+9695 dirSim
+
+
+2)Repetir el apartado anterior con enlaces rígidos. 
+Determinar los inodos de los ficheros y las propiedades con stat (observar el atributo número de enlaces). 
+
+> touch f1
+> ln f1 fRig
+> ls -i
+9716 fRig
+9716 f1
+(El inodo del fichero y del enlace rigido es el mismo mientras que el inodo del enlace simbolico es distinto.)
+
+Para los directorios no es posible establecer enlaces rigidos:
+ln: dir: hard link not allowed for directory
+
+
+3)¿Qué sucede cuando se borra uno de los enlaces rígidos? 
+  Cuando eliminamos el enlace rigido original se elimina el fichero. 
+  Si lo eliminamos usando unlink se reducirán los enlaces del fichero a 1.
+¿Qué sucede si se borra uno de los enlaces simbólicos? 
+  Si se elimina el enlace simbólico original se rompe este enlace y no se puede acceder al fichero.
+¿Y si se borra el fichero original?
+  El enlace rigido no se ve afectado pero el simbólico ahora está vacio y pierde el acceso al fichero.
+
+
+
+
+
+
