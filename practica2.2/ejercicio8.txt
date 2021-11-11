@@ -1,0 +1,14 @@
+
+
+> man stat
+
+Muestra el estado de un fichero o del sistema de ficheros.
+
+Options:
+
+> stat -L: sigue los enlaces.
+> stat -f: muestra el estado del sistema de ficheros en lugar del estado del fichero.
+> stat -c: usa el formato especificado en lugar de el formato establecido por defecto.
+> stat --print: similar a -c, pero interpreta secuencias de escape.
+> stat -t: muestra la información de forma abreviada.
+
