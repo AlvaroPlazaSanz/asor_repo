@@ -1,0 +1,15 @@
+
+
+Fijar la máscara de forma que los nuevos ficheros no tengan permiso de escritura para el grupo y no tengan ningún permiso para otros:
+
+> umask 0027
+
+Comprobar el funcionamiento con touch(1), mkdir(1) y ls(1).
+
+> touch ejercicio6
+> ls -l ejercicio6
+-rw-r----- 1 alvaplaz alvaplaz 0 Nov 11 12:44 ejercicio6
+
+> mkdir ejer6
+> ls -ld ejer6
+drwxr-x--- 2 alvaplaz alvaplaz 4096 Nov 11 12:45 ejer6
