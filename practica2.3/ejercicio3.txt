@@ -1,0 +1,12 @@
+> sudo chrt -f -p 12 $$
+> ./eje2
+
+¿Cuál es la prioridad en este caso del programa? 
+
+Politica: SCHED_FIFO
+Prioridad proceso actual: 12
+Min: 1
+Max: 99
+
+¿Se heredan los atributos de planificación?
+Si se heredan los atributos de planificacion.
