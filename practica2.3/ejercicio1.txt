@@ -1,0 +1,32 @@
+
+> man chrt
+Manipula los atributos en tiempo real de un proceso.
+chrt establece o recupera los atributos de programación en tiempo real de un pid existente, o ejecuta un comando con los atributos.
+
+Politicas:
+-o, --otro :Establece la política de programación como SCHED_OTHER.  Esta es la política de programación por defecto de Linux.
+-f, --fifo :Establece la política de programación como SCHED_FIFO.
+-r, --rr :Establece la política de planificación como SCHED_RR. Si no se define ninguna política, se utiliza SCHED_RR por defecto.
+-b, --batch :Establece la política de planificación como SCHED_BATCH. El argumento de prioridad tiene que estar a cero.
+-i, --idle :Establece la política de programación como SCHED_IDLE. El argumento de prioridad debe ser igual a cero.
+-d, --deadline: Establece la política de programación como SCHED_DEADLINE. El argumento de prioridad debe ser igual a cero. 
+
+Options:
+-a, --all-tasks :Establece o recupera los atributos de programación de todas las tareas (hilos) para un PID determinado.
+-m, --max :Muestra las prioridades mínimas y máximas válidas, y luego sale.
+-p, --pid :Operar sobre un PID existente y no lanzar una nueva tarea.
+-v, --verbose :Muestra información de estado.
+
+> man nice
+> man renice
+
+> sudo renice -n -10 -p $$
+> nice renice -n -10 -p $$
+10 (process ID) old priority 0, new priority -10
+
+
+> sudo/nice chrt -f -p 12 $$
+> chrt -p $$
+pid 10's current scheduling policy: SCHED_FIFO
+pid 10's current scheduling priority: 12
+
