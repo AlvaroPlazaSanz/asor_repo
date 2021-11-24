@@ -9,12 +9,10 @@
 volatile int borrar = 1;
 
 
-
+// kill -10 <pid>
 void suspender(int s){
         borrar = 0;
 }
-
-
 
 
 int main(int argc, char **argv){
