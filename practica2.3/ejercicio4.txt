@@ -1,0 +1,14 @@
+
+> man ps
+
+>  ps -o pid,gid,sid,state,comm
+
+  PID   GID   SID S COMMAND
+   10  1000    10 S bash
+   52  1000    10 R ps
+   
+   ¿Qué identificadores comparten la shell y los programas que se ejecutan en ella? 
+   La shell y los programas ejecutados en ella comparten el identificador de sesion SID y el identificador de grupo GID.
+   
+   ¿Cuál es el identificador de grupo de procesos cuando se crea un nuevo proceso?
+    Cuando se crea un proceso el identificador de grupo es 1000.
