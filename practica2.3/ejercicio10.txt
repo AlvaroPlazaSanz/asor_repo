@@ -1,0 +1,1 @@
+La relacion que existe es que el código de salida se corresponde con el de la señal enviada.
