@@ -1,6 +1,6 @@
 > mkfifo tuberia
-> ls 
-ej1  ej1.c  ejer2  ejer2.c  tuberia
+> ls - l
+prw-r--r-- 1 alvaplaz alvaplaz     0 Nov 29 10:11 tuberia
 > stat tuberia
   File: tuberia
   Size: 0               Blocks: 0          IO Block: 4096   fifo
