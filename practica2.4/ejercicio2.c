@@ -38,7 +38,7 @@ int main(int argc, char**argv){
                                 buffer[rc] = '\0';                                                                  
                                 printf("Mensaje recibido: %s\n", buffer);
                                 sleep(1);
-                                     if(++n == 10){
+                                if(++n == 10){
                                         write(tuberia_hp[1], "Q", 1);
                                         fin = 1;
                                 }
