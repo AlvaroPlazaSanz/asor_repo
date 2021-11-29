@@ -1,0 +1,12 @@
+> mkfifo tuberia
+> ls 
+ej1  ej1.c  ejer2  ejer2.c  tuberia
+> stat tuberia
+  File: tuberia
+  Size: 0               Blocks: 0          IO Block: 4096   fifo
+Device: 810h/2064d      Inode: 2382        Links: 1
+Access: (0644/prw-r--r--)  Uid: ( 1000/alvaplaz)   Gid: ( 1000/alvaplaz)
+Access: 2021-11-29 10:11:00.222608500 +0100
+Modify: 2021-11-29 10:11:00.222608500 +0100
+Change: 2021-11-29 10:11:00.222608500 +0100
+ Birth: -
