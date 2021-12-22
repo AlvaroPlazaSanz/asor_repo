@@ -19,6 +19,10 @@ int main(int argc, char **argv){
                 return -1;
         }
 
+        memset(&hints, 0, sizeof(hints));
+        hints.ai_family = AF_UNSPEC;
+        hints.ai_socktype = SOCK_DGRAM;
+
 
         //Control de errores
         if((rc = getaddrinfo(argv[1], argv[2], &hints, &res)) == -1){
@@ -56,7 +60,7 @@ int main(int argc, char **argv){
         buffer[n] = '\0';
 
         printf("%s", buffer);
-
+        
 
         freeaddrinfo(res);
 
