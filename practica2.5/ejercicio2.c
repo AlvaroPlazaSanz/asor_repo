@@ -16,11 +16,11 @@
                 int n;
 
                 struct sockaddr_storage addr;                                                                                                            socklen_t addrlen = sizeof(struct sockaddr_storage);
-                if((n = recvfrom(sd, buf, 80, 0, (struct sockaddr *) &addr, &addrlen)) == -1){
+                if((n = recvfrom(sd, buffer, 80, 0, (struct sockaddr *) &addr, &addrlen)) == -1){
                         perror(" Error al hacer el recvfrom().\n");
                         return -1;
                 }
-                buf[n] = '\0';
+                buffer[n] = '\0';
                 char host[NI_MAXHOST], serv[NI_MAXSERV];
                 if((rc = getnameinfo((struct sockaddr *) &addr, addrlen, host, NI_MAXHOST, serv, NI_MAXSERV, NI_NUMERICHOST)) == -1){
                         perror("Error al hacer el getnameinfo()\n");
@@ -45,7 +45,7 @@
                         sendto(sd, cadena, strlen(cadena)+1, 0, (struct sockaddr*) &addr, addrlen);
                         }
 
-                        else if(strcmp(buf, "d\n") == 0){
+                        else if(strcmp(buffer, "d\n") == 0){
                                 struct tm *lt;
                                 time_t tim;
                                 time(&tim);
