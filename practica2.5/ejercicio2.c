@@ -47,7 +47,7 @@ int main(int argc, char *argv[]){
 
 
         while(1){
-                char buffer[8];
+                char buffer[80];
                 int n;
 
                 struct sockaddr_storage addr;
